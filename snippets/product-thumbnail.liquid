@@ -76,7 +76,7 @@
     </span>
     {%- render 'loading-spinner' -%}
     <div class="product__media media media--transparent">
-      {%- if lazy_load == false -%}
+      {%- if lazy_load == false and fetch_priority == 'high' -%}
         {{
           media.preview_image
           | image_url: width: 1600
@@ -84,6 +84,17 @@
             class: image_class,
             loading: 'eager',
             fetchpriority: 'high',
+            alt: media_alt,
+            sizes: sizes,
+            widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1600'
+        }}
+      {%- elsif lazy_load == false -%}
+        {{
+          media.preview_image
+          | image_url: width: 1600
+          | image_tag:
+            class: image_class,
+            loading: 'eager',
             alt: media_alt,
             sizes: sizes,
             widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1600'
@@ -133,13 +144,23 @@
           </span>
         {%- endif -%}
       </span>
-      {%- if lazy_load == false -%}
+      {%- if lazy_load == false and fetch_priority == 'high' -%}
         {{
           media.preview_image
           | image_url: width: 1600
           | image_tag:
             loading: 'eager',
             fetchpriority: 'high',
+            alt: media_alt,
+            sizes: sizes,
+            widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1600'
+        }}
+      {%- elsif lazy_load == false -%}
+        {{
+          media.preview_image
+          | image_url: width: 1600
+          | image_tag:
+            loading: 'eager',
             alt: media_alt,
             sizes: sizes,
             widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1600'

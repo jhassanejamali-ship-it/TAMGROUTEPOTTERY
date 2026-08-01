@@ -40,6 +40,14 @@
   elsif section.settings.media_size == 'small'
     assign media_width = 0.45
   endif
+
+  if prioritize_first_media == nil
+    assign prioritize_first_media = true
+  endif
+  assign first_fetch_priority = blank
+  if prioritize_first_media
+    assign first_fetch_priority = 'high'
+  endif
 -%}
 
 <media-gallery
@@ -81,7 +89,8 @@
             media_width: media_width,
             media_fit: section.settings.media_fit,
             constrain_to_viewport: section.settings.constrain_to_viewport,
-            lazy_load: false
+            lazy_load: false,
+            fetch_priority: first_fetch_priority
           %}
         </li>
       {%- endif -%}
