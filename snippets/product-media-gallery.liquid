@@ -42,8 +42,10 @@
   endif
 
   assign first_fetch_priority = 'high'
+  assign first_lazy_load = false
   if prioritize_first_media == false
     assign first_fetch_priority = blank
+    assign first_lazy_load = true
   endif
 -%}
 
@@ -86,7 +88,7 @@
             media_width: media_width,
             media_fit: section.settings.media_fit,
             constrain_to_viewport: section.settings.constrain_to_viewport,
-            lazy_load: false,
+            lazy_load: first_lazy_load,
             fetch_priority: first_fetch_priority
           %}
         </li>
