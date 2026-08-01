@@ -3752,3 +3752,18 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+@media screen and (max-width: 749px) {
+  a,
+  button,
+  select,
+  .slider-counter__link {
+    min-width: 4.4rem;
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+}
