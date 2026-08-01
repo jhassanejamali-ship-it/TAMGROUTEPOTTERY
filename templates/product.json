@@ -38,18 +38,58 @@
           "type": "quantity_selector",
           "settings": {}
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
+      "buy_buttons": {
+        "type": "buy_buttons",
+        "settings": {
+          "show_dynamic_checkout": true,
+          "show_gift_card_recipient": true
+        }
+      },
+      "trust_points": {
+        "type": "trust_points",
           "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
-        "share": {
+          "point_1": "Handmade in Tamegroute, Morocco",
+          "icon_1": "handmade",
+          "point_2": "Double-boxed and insured packaging",
+          "icon_2": "package",
+          "point_3": "Worldwide DHL & FedEx tracked shipping",
+          "icon_3": "globe",
+          "point_4": "14-day returns, breakage refunded",
+          "icon_4": "returns"
+        }
+      },
+      "description": {
+        "type": "description",
+        "settings": {}
+      },
+      "product_info_tabs": {
+        "type": "product_info_tabs",
+        "settings": {
+          "dimensions_heading": "Dimensions & specifications",
+          "type_label": "Type",
+          "weight_label": "Weight",
+          "diameter_label": "Diameter",
+          "height_label": "Height",
+          "material_label": "Material",
+          "origin_label": "Origin",
+          "care_heading": "Care instructions",
+          "care_content": "<p>Hand wash with lukewarm water. Do not use a dishwasher or microwave. Avoid thermal shock, dry immediately, and do not use abrasive cleaners.</p>",
+          "shipping_heading": "Shipping & returns",
+          "shipping_content": "<p>Each piece is double-boxed and shipped with tracking via DHL or FedEx. Delivery times vary by destination. Returns are accepted within 14 days, and breakage is refunded when reported with photos.</p>",
+          "faq_heading": "Frequently asked questions",
+          "faq_question_1": "Are the glazes food-safe?",
+          "faq_answer_1": "<p>Food-safety suitability can vary by piece and intended use. Please contact us before using a piece for food if you need specific guidance.</p>",
+          "faq_question_2": "Why is every piece different?",
+          "faq_answer_2": "<p>Each item is handmade and fired using traditional techniques, so natural variations in shape, texture, and glaze are part of its character.</p>",
+          "faq_question_3": "How long does delivery take?",
+          "faq_answer_3": "<p>Express delivery times depend on destination. We provide tracking details after dispatch and confirm the expected timeframe for your order.</p>",
+          "faq_question_4": "What happens if my piece arrives broken?",
+          "faq_answer_4": "<p>Contact us promptly with photos of the packaging and damaged piece. We will review the claim and refund the broken item according to our policy.</p>",
+          "faq_question_5": "Do you offer custom or wholesale orders?",
+          "faq_answer_5": "<p>Yes. Contact us for custom designs, larger quantities, and wholesale enquiries.</p>"
+        }
+      },
+      "share": {
           "type": "share",
           "settings": {
             "share_label": "Share"
@@ -62,9 +102,11 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons",
-        "description",
-        "share"
+      "buy_buttons",
+      "trust_points",
+      "description",
+      "product_info_tabs",
+      "share"
       ],
       "settings": {
         "enable_sticky_info": true,
