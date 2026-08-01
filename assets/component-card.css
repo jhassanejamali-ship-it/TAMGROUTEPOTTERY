@@ -104,6 +104,18 @@
   width: 100%;
 }
 
+.card__inner.ratio {
+  aspect-ratio: 1 / 1;
+}
+
+.card__inner.ratio::before {
+  padding-bottom: 0;
+}
+
+.card__media .media img {
+  object-fit: cover;
+}
+
 .card__media {
   margin: var(--image-padding);
   width: calc(100% - 2 * var(--image-padding));
@@ -136,7 +148,12 @@
 
 .card__information {
   grid-row-start: 2;
-  padding: 1.3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-height: 9.6rem;
+  padding: var(--space-3) var(--space-1);
+  border-bottom: 0.1rem solid #e8dfd2;
 }
 
 .card:not(.ratio) > .card__content {
@@ -303,6 +320,12 @@
 .card__heading {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 1.7rem;
+  line-height: 1.25;
+}
+
+.card-information .price {
+  margin-top: auto;
 }
 
 .card__heading:last-child {

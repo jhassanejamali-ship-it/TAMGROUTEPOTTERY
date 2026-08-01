@@ -1,4 +1,11 @@
 :root {
+  --space-1: 0.8rem;
+  --space-2: 1.6rem;
+  --space-3: 2.4rem;
+  --space-4: 3.2rem;
+  --space-5: 4.8rem;
+  --space-6: 6.4rem;
+  --space-7: 8rem;
   --alpha-button-background: 1;
   --alpha-button-border: 1;
   --alpha-link: 0.85;
@@ -6,6 +13,82 @@
   --focused-base-outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   --focused-base-outline-offset: 0.3rem;
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+}
+
+html {
+  background: rgb(var(--color-background));
+}
+
+body {
+  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
+  overflow-x: hidden;
+}
+
+button,
+.button,
+a.button {
+  min-height: 4.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section + .section {
+  margin-top: var(--space-6);
+}
+
+.page-width--narrow,
+.rte {
+  max-width: 72rem;
+}
+
+.rte > * + * {
+  margin-top: var(--space-3);
+}
+
+.rte h2,
+.rte h3,
+.rte h4 {
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
+}
+
+.page-width--narrow .rte,
+.main-page-title + .rte {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shopify-policy__container,
+.main-page .rte {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  padding-top: var(--space-7);
+}
+
+.footer-block__heading {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer__content-top {
+  row-gap: var(--space-6);
+}
+
+.footer__content-bottom-wrapper {
+  margin-top: var(--space-5);
+  padding-top: var(--space-3);
+  border-top: 0.1rem solid #e8dfd2;
+}
+
+.breadcrumbs {
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-3);
 }
 
 .product-card-wrapper .card,
@@ -2347,7 +2430,15 @@ input[type='checkbox'] {
 }
 
 .header-wrapper--border-bottom {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-bottom: 0.1rem solid #e8dfd2;
+}
+
+.shopify-section-header-sticky .header-wrapper {
+  border-bottom: 0.1rem solid #e8dfd2;
+}
+
+.header {
+  min-height: 6.4rem;
 }
 
 .header {
@@ -2557,6 +2648,43 @@ input[type='checkbox'] {
   height: 4.4rem;
   width: 4.4rem;
   padding: 0;
+}
+
+@media screen and (max-width: 749px) {
+  .page-width {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  .section + .section {
+    margin-top: var(--space-5);
+  }
+
+  .header {
+    min-height: 5.6rem;
+  }
+
+  .header__icon,
+  .header__icon--cart .icon,
+  .header__icon .svg-wrapper {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+
+  .rte,
+  .rte p,
+  .rte li {
+    font-size: 1.4rem;
+    line-height: 1.65;
+  }
+
+  .footer {
+    padding-top: var(--space-6);
+  }
+
+  .grid {
+    min-width: 0;
+  }
 }
 
 .header__icon--cart {
