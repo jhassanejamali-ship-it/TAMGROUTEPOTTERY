@@ -304,19 +304,23 @@
     </div>
   </header>
   {%- if section.settings.secondary_nav_enabled -%}
+    {%- assign secondary_blog_url = section.settings.secondary_nav_blog_url | default: '/blogs/news' -%}
+    {%- assign secondary_about_url = section.settings.secondary_nav_about_url | default: '/pages/about-us' -%}
+    {%- assign secondary_faq_url = section.settings.secondary_nav_faq_url | default: '/pages/faq' -%}
+    {%- assign secondary_wholesale_url = section.settings.secondary_nav_wholesale_url | default: '/pages/wholesale' -%}
     <nav class="header-secondary-nav page-width" aria-label="{{ 'general.breadcrumbs.label' | t }}">
       <ul class="header-secondary-nav__list list-unstyled">
-        {%- if section.settings.secondary_nav_blog_url != blank and section.settings.secondary_nav_blog_label != blank -%}
-          <li><a href="{{ section.settings.secondary_nav_blog_url }}">{{ section.settings.secondary_nav_blog_label | escape }}</a></li>
+        {%- if secondary_blog_url != blank and section.settings.secondary_nav_blog_label != blank -%}
+          <li><a href="{{ secondary_blog_url }}">{{ section.settings.secondary_nav_blog_label | escape }}</a></li>
         {%- endif -%}
-        {%- if section.settings.secondary_nav_about_url != blank and section.settings.secondary_nav_about_label != blank -%}
-          <li><a href="{{ section.settings.secondary_nav_about_url }}">{{ section.settings.secondary_nav_about_label | escape }}</a></li>
+        {%- if secondary_about_url != blank and section.settings.secondary_nav_about_label != blank -%}
+          <li><a href="{{ secondary_about_url }}">{{ section.settings.secondary_nav_about_label | escape }}</a></li>
         {%- endif -%}
-        {%- if section.settings.secondary_nav_faq_url != blank and section.settings.secondary_nav_faq_label != blank -%}
-          <li><a href="{{ section.settings.secondary_nav_faq_url }}">{{ section.settings.secondary_nav_faq_label | escape }}</a></li>
+        {%- if secondary_faq_url != blank and section.settings.secondary_nav_faq_label != blank -%}
+          <li><a href="{{ secondary_faq_url }}">{{ section.settings.secondary_nav_faq_label | escape }}</a></li>
         {%- endif -%}
-        {%- if section.settings.secondary_nav_wholesale_url != blank and section.settings.secondary_nav_wholesale_label != blank -%}
-          <li><a href="{{ section.settings.secondary_nav_wholesale_url }}">{{ section.settings.secondary_nav_wholesale_label | escape }}</a></li>
+        {%- if secondary_wholesale_url != blank and section.settings.secondary_nav_wholesale_label != blank -%}
+          <li><a href="{{ secondary_wholesale_url }}">{{ section.settings.secondary_nav_wholesale_label | escape }}</a></li>
         {%- endif -%}
       </ul>
     </nav>
@@ -628,7 +632,6 @@
     {
       "type": "url",
       "id": "secondary_nav_blog_url",
-      "default": "/blogs/news",
       "label": "Journal link"
     },
     {
@@ -640,7 +643,6 @@
     {
       "type": "url",
       "id": "secondary_nav_about_url",
-      "default": "/pages/about-us",
       "label": "About link"
     },
     {
@@ -652,7 +654,6 @@
     {
       "type": "url",
       "id": "secondary_nav_faq_url",
-      "default": "/pages/faq",
       "label": "FAQ link"
     },
     {
@@ -664,7 +665,6 @@
     {
       "type": "url",
       "id": "secondary_nav_wholesale_url",
-      "default": "/pages/wholesale",
       "label": "Wholesale link"
     },
     {
