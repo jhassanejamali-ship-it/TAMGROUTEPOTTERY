@@ -41,12 +41,9 @@
     assign media_width = 0.45
   endif
 
-  if prioritize_first_media == nil
-    assign prioritize_first_media = true
-  endif
-  assign first_fetch_priority = blank
-  if prioritize_first_media
-    assign first_fetch_priority = 'high'
+  assign first_fetch_priority = 'high'
+  if prioritize_first_media == false
+    assign first_fetch_priority = blank
   endif
 -%}
 
