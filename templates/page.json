@@ -1,0 +1,79 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_JWLekm": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_fBFfJG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Trade Program",
+            "heading_size": "hxxl"
+          }
+        },
+        "text_bhzTKr": {
+          "type": "text",
+          "settings": {
+            "text": "Join our exclusive partnership and bring authentic Tamegroute ceramics to your customers",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_bNA9VU": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Trade Payment Policy & Conditions",
+            "button_link_1": "https://tamegroutepottery.com/pages/trade-payment-policy",
+            "button_style_secondary_1": false,
+            "button_label_2": "Apply for Trade Partnership",
+            "button_link_2": "shopify://pages/trade-program-application",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_fBFfJG",
+        "text_bhzTKr",
+        "buttons_bNA9VU"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/rn-image_picker_lib_temp_47d395b3-3647-4d18-8fa3-f1413cf758a9.png",
+        "image_2": "shopify://shop_images/rn-image_picker_lib_temp_431eb123-a0b9-4226-8f8e-0beedd70cdcd.png",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
+        "image_behavior": "ambient",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "inverse",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "17836469494ba8d03f": {
+      "type": "_blocks",
+      "settings": {}
+    }
+  },
+  "order": [
+    "image_banner_JWLekm",
+    "main",
+    "17836469494ba8d03f"
+  ]
+}

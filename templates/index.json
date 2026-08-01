@@ -1,0 +1,820 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_mBqgA9": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_zaQBEc": {
+          "type": "heading",
+          "settings": {
+            "heading": "Authentic Handmade Tamegroute Pottery",
+            "heading_size": "h0"
+          }
+        },
+        "text_twkrcU": {
+          "type": "text",
+          "settings": {
+            "text": "Discover authentic, handmade Tamegroute pottery from Morocco. Shop our unique collection of green ceramics, candle holders, bowls and vases. Sourced directly from Moroccan artisans in the Sahara and safely shipped worldwide. stress free",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_cNGBcm": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop the Collection",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "Our Story",
+            "button_link_2": "shopify://pages/about-us",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_zaQBEc",
+        "text_twkrcU",
+        "buttons_cNGBcm"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/a34a57fb-4827-4a9f-9f7a-be94ed72a325.png",
+        "image_2": "shopify://shop_images/rn-image_picker_lib_temp_02730d31-befc-4bce-a09b-376ea3890fcd.jpg",
+        "image_overlay_opacity": 20,
+        "image_height": "medium",
+        "image_behavior": "ambient",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "accent-2",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "left",
+        "show_text_below": true
+      }
+    },
+    "multicolumn_nUxcth": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_PbpbqM": {
+          "type": "column",
+          "settings": {
+            "title": "Made in Tamegroute, Morocco",
+            "text": "<p>Handcrafted by master artisans using centuries-old techniques passed down through generations. Each piece reflects the skill and dedication of our craftspeople.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Xd3pzn": {
+          "type": "column",
+          "settings": {
+            "title": "Safely Shipped Worldwide",
+            "text": "<p>Double-boxed with bubble wrap for safe international delivery. We take care to ensure your pottery arrives in perfect condition, no matter where you are.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TFaQTM": {
+          "type": "column",
+          "settings": {
+            "title": "Authenticity Guaranteed",
+            "text": "<p>Sourced directly from the workshop, not mass-produced. Every piece is a genuine creation from Tamegroute, with its own unique character and story.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_PbpbqM",
+        "column_Xd3pzn",
+        "column_TFaQTM"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Why Choose Tamegroute Pottery",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "shopify://pages/contact-us",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "background-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_iafPcD": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_3pt9UE": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tamegroute-candle-holders"
+          }
+        },
+        "featured_collection_mTDijF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tamegroute-vases-jars"
+          }
+        },
+        "featured_collection_7fx6aX": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "collections-serving-dishes-platters"
+          }
+        },
+        "featured_collection_k8VBFp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tamegroute-bowls-plates"
+          }
+        },
+        "featured_collection_hjeUK3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "moroccan-lamps-souvenirs"
+          }
+        },
+        "featured_collection_Tc98Wg": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "moroccan-wood-wool"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_3pt9UE",
+        "featured_collection_mTDijF",
+        "featured_collection_7fx6aX",
+        "featured_collection_k8VBFp",
+        "featured_collection_hjeUK3",
+        "featured_collection_Tc98Wg"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "<strong> SHOP COLLECTIONS</strong>",
+        "heading_size": "h2",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "settings": {
+        "collection": "tamegroute-candle-holders",
+        "products_to_show": 10,
+        "title": "<strong>Featured products</strong>",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "link",
+        "color_scheme": "accent-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "17604838702e46da78": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_da82d48_CFMpDQ": {
+          "type": "ai_gen_block_da82d48",
+          "settings": {
+            "title": "Flash Sale",
+            "subtitle": "Limited time offers on selected items",
+            "product_limit": 12,
+            "button_text": "Shop Now",
+            "enable_autoplay": true,
+            "autoplay_speed": 4,
+            "card_gap": 25,
+            "desktop_width_percent": 100,
+            "padding": 60,
+            "background_color": "#f0f9f6",
+            "background_gradient_color": "#e8f5e9",
+            "title_color": "#125920",
+            "subtitle_color": "#377743",
+            "product_title_color": "#125920",
+            "price_color": "#125920",
+            "compare_price_color": "#999999",
+            "card_background": "#ffffff",
+            "badge_color": "#125920",
+            "badge_gradient_color": "#377743",
+            "badge_text_color": "#ffffff",
+            "button_color": "#125920",
+            "button_gradient_color": "#377743",
+            "button_text_color": "#ffffff",
+            "button_hover_color": "#004229",
+            "nav_button_color": "#125920",
+            "nav_gradient_color": "#377743",
+            "nav_button_icon_color": "#ffffff",
+            "dot_color": "#125920",
+            "title_size": 42,
+            "subtitle_size": 16,
+            "product_title_size": 18,
+            "price_size": 22,
+            "button_text_size": 14,
+            "card_radius": 16,
+            "button_radius": 8
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_34d57cd_F9VwFR": {
+          "type": "ai_gen_block_34d57cd",
+          "settings": {
+            "heading": "What our customers say",
+            "subheading": "Don't just take our word for it - hear from our satisfied customers",
+            "testimonial_1_text": "Absolutely love my Tamegroute pottery! The craftsmanship is incredible and it adds such a beautiful, authentic touch to my home. The green glaze is stunning.",
+            "testimonial_1_author_name": "Sarah Johnson",
+            "testimonial_1_author_title": "Interior Designer",
+            "testimonial_1_author_image": "shopify://shop_images/home-decor-natural-1-middle.jpg",
+            "testimonial_1_rating": 3,
+            "testimonial_2_text": "The quality exceeded my expectations. Each piece tells a story and you can feel the tradition and skill that went into making it. Highly recommend!",
+            "testimonial_2_author_name": "Kate Chen",
+            "testimonial_2_author_title": "Art Collector",
+            "testimonial_2_author_image": "shopify://shop_images/DESERT.webp",
+            "testimonial_2_rating": 5,
+            "testimonial_3_text": "Fast shipping, beautiful packaging, and the pottery is even more gorgeous in person. This is authentic Moroccan artistry at its finest.",
+            "testimonial_3_author_name": "Emma Rodriguez",
+            "testimonial_3_author_title": "Home Decorator",
+            "testimonial_3_author_image": "shopify://shop_images/a-model-perched-on-a-stool-smiles.jpg",
+            "testimonial_3_rating": 5,
+            "show_trust_indicators": true,
+            "trust_indicator_1": "Secure payments",
+            "trust_indicator_2": "Verified reviews",
+            "trust_indicator_3": "Loved by 700+ customers",
+            "cta_text": "Shop collection",
+            "cta_link": "",
+            "background_color": "#ffffff",
+            "heading_color": "#377743",
+            "text_color": "#377743",
+            "accent_color": "#125920",
+            "card_background": "#ffffff",
+            "star_color": "#ffd700",
+            "button_background": "#125920",
+            "button_text_color": "#ffffff",
+            "button_hover_background": "#377743",
+            "button_hover_text_color": "#ffffff",
+            "heading_size": 36,
+            "subheading_size": 18,
+            "testimonial_text_size": 16,
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "card_border_radius": 12,
+            "button_border_radius": 8
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_da82d48_CFMpDQ",
+        "ai_gen_block_34d57cd_F9VwFR"
+      ],
+      "settings": {}
+    },
+    "176048230430946019": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "rich_text_kapxtX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CDkg4j": {
+          "type": "heading",
+          "settings": {
+            "heading": "Earth's heart brings forth vibrant colors and echoes of history.",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CDkg4j"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "featured_product_RNaTDB": {
+      "type": "featured-product",
+      "blocks": {
+        "text_mxMPnb": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_NJB7m4": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_mAY3WM": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_DrVEdW": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_RN4zdM": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_G83tMb": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_zaMzkF": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_mxMPnb",
+        "title_NJB7m4",
+        "price_mAY3WM",
+        "variant_picker_DrVEdW",
+        "quantity_selector_RN4zdM",
+        "buy_buttons_G83tMb",
+        "share_zaMzkF"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "tamegroute-pottery-green-vase-handmade-moroccohandmade-moroccan-ceramic-art",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "large",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_txVjBb": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_AgGL8N": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Free Gift Promotion",
+            "heading_size": "h1"
+          }
+        },
+        "text_Qx7RUh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Purchase any 2 handmade Tamegroute pieces and we'll automatically add a complimentary Moroccan gift to your order — a beautifully crafted ceramic surprise selected from our artisan collection. This offer applies while gift supplies last and cannot be combined with other discounts. No code needed — the gift is added at checkout automatically.</p>"
+          }
+        },
+        "button_6biMh8": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_AgGL8N",
+        "text_Qx7RUh",
+        "button_6biMh8"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "rich_text_WfxFjr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_BA3EG8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tamegroute Pottery Shipping Details",
+            "heading_size": "h1"
+          }
+        },
+        "text_iznxUQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>✓ <strong>Shipping calculated at checkout</strong> | ✓ <strong>Worldwide delivery</strong> | ✓ <strong>Secure packaging</strong></p><p>See details below for estimated delivery times and our return policy</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BA3EG8",
+        "text_iznxUQ"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "inverse",
+        "full_width": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "collapsible_content_TLFeDA": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_BxFHR4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Shipping Information",
+            "icon": "truck",
+            "row_content": "<p>We ship worldwide via FedEx, DHL, and Sea Shipping. Shipping costs are not included in the product price due to the premium courier service we use.</p><ul><li><strong>Standard orders (FedEx & DHL):</strong> Delivered in 3–5 days</li><li><strong>Large or wholesale orders:</strong> After your order is confirmed, you will receive a separate shipping quote before any charge is made.</li><li><strong>Sea Shipping:</strong> Delivered in 25–30 days. Pricing is calculated based on weight (kg). Includes tracking information, though delivery times are slower than express options. Ideal for large orders and cost-conscious customers.</li><li><strong>Europe Shipping:</strong> We partner with 2 trusted companies that specialize in ceramic packaging with an excellent track record for reliability. We serve the UK, France, Spain, and Germany with reasonable pricing. Payment terms: 50% before shipping, 50% on delivery. All shipments include tracking, and our transporter provides WhatsApp support for customer assistance throughout the delivery process.</li></ul><p>We'll always confirm with you before proceeding.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_VTryG3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Returns & Exchanges",
+            "icon": "return",
+            "row_content": "<p>We want you to be completely satisfied with your Tamegroute pottery. If you're not happy with your purchase, we offer a hassle-free return policy.</p><p><strong>Return Policy:</strong></p><ul><li>30-day return window from delivery date</li><li>Items must be unused and in original packaging</li><li>Return shipping costs are the customer's responsibility</li><li>Refunds processed within 5-7 business days of receiving returned items</li></ul><p>For exchanges or to discuss your return, please contact us at support@tamegroutepottery.com</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_e493rz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Delivery & Packaging",
+            "icon": "box",
+            "row_content": "<p>Each piece of Tamegroute pottery is handcrafted and unique. We take special care in packaging to protect your items during transit.</p><p><strong>Our Packaging Includes:</strong></p><ul><li>Protective bubble wrap and padding</li><li>Sturdy cardboard boxes</li><li>Fragile handling labels</li><li>Tracking information for peace of mind</li></ul><p>If your item arrives damaged, please contact us immediately with photos, and we'll work with you to resolve the issue. Your satisfaction is our priority.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_xeEjb6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_BxFHR4",
+        "collapsible_row_VTryG3",
+        "collapsible_row_e493rz",
+        "collapsible_row_xeEjb6"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Shipping & Returns",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "section",
+        "container_color_scheme": "accent-1",
+        "color_scheme": "background-1",
+        "open_first_collapsible_row": true,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_w4DFXc": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_KRGrkL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Crafted with Care",
+            "heading_size": "h0"
+          }
+        },
+        "buttons_qUFTyT": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "View collection",
+            "button_link_1": "shopify://collections",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_KRGrkL",
+        "buttons_qUFTyT"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/1000130728.jpg",
+        "image_2": "shopify://shop_images/1000119455.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": false,
+        "color_scheme": "accent-2",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "rich_text_EBrBjT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3PPBPU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our ceramics are a fusion of tradition and creativity, designed to enrich your living spaces with beauty and authenticity.",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3PPBPU"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "accent-1",
+        "full_width": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_cUp9Di": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_fG8KWq": {
+          "type": "heading",
+          "settings": {
+            "heading": "From the Sahara to Your Home",
+            "heading_size": "h1"
+          }
+        },
+        "text_N7Pyhg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>My name is Hassane. I grew up surrounded by the emerald-green glazed pottery of Tamegroute — a small village in southern Morocco where this ancient craft has been passed down for generations. I started this store to connect you directly with the artisans who make these pieces by hand, one at a time, using the same clay and techniques used for centuries. When you buy from us, you're not buying a product — you're bringing a piece of living Moroccan heritage into your home.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_DJHkk6": {
+          "type": "button",
+          "settings": {
+            "button_label": "Meet Hassane!",
+            "button_link": "shopify://pages/contact-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fG8KWq",
+        "text_N7Pyhg",
+        "button_DJHkk6"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/1000126048.jpg",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "accent-1",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "rich_text_XiRMgR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_nzMgaw": {
+          "type": "heading",
+          "settings": {
+            "heading": "What Makes Tamegroute Pottery Unique?",
+            "heading_size": "h1"
+          }
+        },
+        "text_znNA9n": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tamegroute pottery is distinguished by its signature emerald-green glaze, derived from natural manganese found only in this region. Each piece is wheel-thrown or hand-built by a single artisan, fired in a traditional wood-burning kiln, and finished with a glaze that gives every item its characteristic depth and variation. No two pieces are identical — the slight variations in color and texture are a mark of authenticity, not imperfection.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nzMgaw",
+        "text_znNA9n"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "newsletter_64Crbw": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_iwpHEw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join Our Newsletter",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_NcdF9b": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
+          }
+        },
+        "email_form_nk8J9f": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_iwpHEw",
+        "paragraph_NcdF9b",
+        "email_form_nk8J9f"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_banner_XCpRWB": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_xAcTzr": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Tamegroute Pottery – Wholesale Program</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_wTA69V": {
+          "type": "text",
+          "settings": {
+            "text": "Step into the world of authentic Tamegroute pottery craftsmanship. Our pottery is handmade in southern Morocco using centuries-old techniques, natural clay and the iconic green glaze that makes each piece one-of-a-kind.We work directly with artisans to supply: Interior designers Boutique, Shops concept, stores Hotels & restaurants, Online brands. Whether you need candle holders, bowls, plates, vases, or custom designs, we offer competitive wholesale pricing and reliable worldwide shipping.",
+            "text_style": "body"
+          }
+        },
+        "buttons_wnQwtG": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Wholesale Enquiry",
+            "button_link_1": "shopify://pages/contact-us",
+            "button_style_secondary_1": false,
+            "button_label_2": "FAQ-Tamegroute Pottery",
+            "button_link_2": "shopify://pages/faq-tamegroute-pottery",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xAcTzr",
+        "text_wTA69V",
+        "buttons_wnQwtG"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Screenshot_2025-11-24-01-09-10-155_com.instagram.android-edit.jpg",
+        "image_2": "shopify://shop_images/rn-image_picker_lib_temp_8a641217-34e8-49eb-9855-2dfae39327c3.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "1769774565b6c1eac4": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "17850825797af509b0": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_0edf35b_LDNJYm": {
+          "type": "ai_gen_block_0edf35b",
+          "settings": {
+            "message": "Currently out of stock — new stock arriving within 3 days!",
+            "show_icon": true,
+            "background_color": "#f0f9f6",
+            "text_color": "#347f43",
+            "icon_color": "#347f43",
+            "border_color": "#347f43",
+            "border_thickness": 1,
+            "border_radius": 18,
+            "font_size": 14,
+            "icon_size": 20,
+            "padding_vertical": 12,
+            "padding_horizontal": 16,
+            "shadow_opacity": 0.1,
+            "spacing_top": 16,
+            "spacing_bottom": 16
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_0edf35b_LDNJYm"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "image_banner_mBqgA9",
+    "multicolumn_nUxcth",
+    "collection_list_iafPcD",
+    "featured_collection",
+    "17604838702e46da78",
+    "176048230430946019",
+    "rich_text_kapxtX",
+    "featured_product_RNaTDB",
+    "rich_text_txVjBb",
+    "rich_text_WfxFjr",
+    "collapsible_content_TLFeDA",
+    "image_banner_w4DFXc",
+    "rich_text_EBrBjT",
+    "image_with_text_cUp9Di",
+    "rich_text_XiRMgR",
+    "newsletter_64Crbw",
+    "image_banner_XCpRWB",
+    "1769774565b6c1eac4",
+    "17850825797af509b0"
+  ]
+}

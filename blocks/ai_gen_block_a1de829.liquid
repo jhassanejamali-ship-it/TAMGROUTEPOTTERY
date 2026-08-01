@@ -1,0 +1,582 @@
+{% doc %}
+  @prompt
+    Improve the existing Trust Video section on my homepage.
+    
+    Text & Colors:
+    – Change all text (heading + paragraph) to the same brand green used elsewhere on my website.
+    – Keep the background clean and light.
+    – The bottom area should remain deep green, consistent with my brand.
+    
+    Video Layout:
+    – Make the YouTube video much larger and more visible, especially on desktop.
+    – The video should be full width inside the section, centered, with rounded corners and a soft shadow.
+    – Maintain perfect responsiveness for mobile, tablet, and desktop.
+    
+    Content Structure:
+    – Video first (main focus)
+    – Short trust text under the video
+    – Clear CTA button under the text:
+    “Contact us for custom order” → link to Contact page
+    
+    Goal:
+    – Build trust with buyers by highlighting authentic handmade Moroccan pottery.
+    – Clean, premium, artisanal look suitable for an international audience.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-trust-video-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding_top }}px 0 0 0;
+  }
+
+  .ai-trust-video-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-trust-video-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin-bottom: {{ block.settings.spacing_after_video }}px;
+    border-radius: {{ block.settings.video_border_radius }}px;
+    overflow: hidden;
+    box-shadow: 0 {{ block.settings.shadow_vertical }}px {{ block.settings.shadow_blur }}px rgba(0, 0, 0, {{ block.settings.shadow_opacity }});
+  }
+
+  .ai-trust-video-wrapper-{{ ai_gen_id }} iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .ai-trust-video-content-{{ ai_gen_id }} {
+    text-align: {{ block.settings.text_alignment }};
+    padding-bottom: {{ block.settings.spacing_before_footer }}px;
+  }
+
+  .ai-trust-video-heading-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.heading_size }}px;
+    margin: 0 0 {{ block.settings.heading_spacing }}px 0;
+    line-height: 1.3;
+    font-weight: 600;
+  }
+
+  .ai-trust-video-text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    line-height: 1.6;
+    margin: 0 0 {{ block.settings.text_spacing }}px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ai-trust-video-text-{{ ai_gen_id }} p {
+    margin: 0 0 16px 0;
+  }
+
+  .ai-trust-video-text-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-trust-video-cta-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_font_size }}px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: {{ block.settings.button_border_width }}px solid {{ block.settings.button_border_color }};
+  }
+
+  .ai-trust-video-cta-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_bg_color }};
+    color: {{ block.settings.button_hover_text_color }};
+    border-color: {{ block.settings.button_hover_border_color }};
+    transform: translateY(-2px);
+  }
+
+  .ai-trust-video-footer-{{ ai_gen_id }} {
+    background-color: {{ block.settings.footer_bg_color }};
+    padding: {{ block.settings.footer_padding }}px 20px;
+    margin-top: 0;
+  }
+
+  .ai-trust-video-empty-state-{{ ai_gen_id }} {
+    background-color: #f4f4f4;
+    border-radius: {{ block.settings.video_border_radius }}px;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: {{ block.settings.spacing_after_video }}px;
+  }
+
+  .ai-trust-video-empty-state-{{ ai_gen_id }} svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    opacity: 0.3;
+  }
+
+  .ai-trust-video-empty-message-{{ ai_gen_id }} {
+    color: #666;
+    font-size: 16px;
+    font-style: italic;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-trust-video-{{ ai_gen_id }} {
+      padding: {{ block.settings.section_padding_top | times: 0.6 }}px 0 0 0;
+    }
+
+    .ai-trust-video-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.7 }}px;
+      margin-bottom: {{ block.settings.heading_spacing | times: 0.7 }}px;
+    }
+
+    .ai-trust-video-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.9 }}px;
+      margin-bottom: {{ block.settings.text_spacing | times: 0.8 }}px;
+    }
+
+    .ai-trust-video-wrapper-{{ ai_gen_id }} {
+      margin-bottom: {{ block.settings.spacing_after_video | times: 0.7 }}px;
+      border-radius: {{ block.settings.video_border_radius | times: 0.7 }}px;
+    }
+
+    .ai-trust-video-cta-{{ ai_gen_id }} {
+      padding: {{ block.settings.button_padding_vertical | times: 0.8 }}px {{ block.settings.button_padding_horizontal | times: 0.8 }}px;
+      font-size: {{ block.settings.button_font_size | times: 0.9 }}px;
+    }
+
+    .ai-trust-video-footer-{{ ai_gen_id }} {
+      padding: {{ block.settings.footer_padding | times: 0.7 }}px 20px;
+    }
+
+    .ai-trust-video-content-{{ ai_gen_id }} {
+      padding-bottom: {{ block.settings.spacing_before_footer | times: 0.7 }}px;
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 989px) {
+    .ai-trust-video-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.85 }}px;
+    }
+
+    .ai-trust-video-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.95 }}px;
+    }
+  }
+{% endstyle %}
+
+<trust-video-{{ ai_gen_id }} class="ai-trust-video-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-trust-video-container-{{ ai_gen_id }}">
+    {% if block.settings.youtube_url != blank %}
+      <div class="ai-trust-video-wrapper-{{ ai_gen_id }}">
+        <iframe
+          src="https://www.youtube.com/embed/{{ block.settings.youtube_url }}?rel=0&modestbranding=1"
+          title="{{ block.settings.video_title | escape }}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    {% else %}
+      <div class="ai-trust-video-empty-state-{{ ai_gen_id }}">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="23 7 16 12 23 17 23 7"></polygon>
+          <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+        </svg>
+        <div class="ai-trust-video-empty-message-{{ ai_gen_id }}">
+          Add your YouTube video ID to get started
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="ai-trust-video-content-{{ ai_gen_id }}">
+      {% if block.settings.heading != blank %}
+        <h2 class="ai-trust-video-heading-{{ ai_gen_id }}">
+          {{ block.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if block.settings.text != blank %}
+        <div class="ai-trust-video-text-{{ ai_gen_id }}">
+          {{ block.settings.text }}
+        </div>
+      {% endif %}
+
+      {% if block.settings.cta_text != blank %}
+        <a
+          href="{{ block.settings.cta_link }}"
+          class="ai-trust-video-cta-{{ ai_gen_id }}"
+        >
+          {{ block.settings.cta_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="ai-trust-video-footer-{{ ai_gen_id }}"></div>
+</trust-video-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class TrustVideo{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.setupAccessibility();
+      }
+
+      setupAccessibility() {
+        const iframe = this.querySelector('iframe');
+        if (iframe && !iframe.hasAttribute('title')) {
+          iframe.setAttribute('title', 'Trust video');
+        }
+      }
+    }
+
+    customElements.define('trust-video-{{ ai_gen_id }}', TrustVideo{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Trust video",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "text",
+      "id": "youtube_url",
+      "label": "YouTube video ID",
+      "info": "Enter only the video ID (e.g., dQw4w9WgXcQ from youtube.com/watch?v=dQw4w9WgXcQ)"
+    },
+    {
+      "type": "text",
+      "id": "video_title",
+      "label": "Video title",
+      "default": "Handmade Moroccan pottery process",
+      "info": "For accessibility"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 800,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "label": "Maximum width",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "video_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Video corner radius",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Video shadow"
+    },
+    {
+      "type": "range",
+      "id": "shadow_vertical",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Vertical offset",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "shadow_blur",
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Blur",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "shadow_opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "label": "Opacity",
+      "default": 0.2
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Authentic handmade Moroccan pottery"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Each piece is crafted by skilled artisans in Tamegroute using traditional techniques passed down through generations. Watch our process and discover the authentic craftsmanship behind every vessel.</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#377743"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Call to action"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Button text",
+      "default": "Contact us for custom order"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Button link"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Button font size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Button vertical padding",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "min": 16,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Button horizontal padding",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Button corner radius",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Button border width",
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button background",
+      "default": "#377743"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Button border",
+      "default": "#377743"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Button hover background",
+      "default": "#125920"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Button hover text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_border_color",
+      "label": "Button hover border",
+      "default": "#125920"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "footer_bg_color",
+      "label": "Footer background",
+      "default": "#125920"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Section top padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "spacing_after_video",
+      "min": 20,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Space after video",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Space after heading",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "text_spacing",
+      "min": 16,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Space after text",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "spacing_before_footer",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Space before footer",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "footer_padding",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Footer padding",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust video"
+    }
+  ]
+}
+{% endschema %}

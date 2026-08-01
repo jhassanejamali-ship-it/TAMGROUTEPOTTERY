@@ -1,0 +1,232 @@
+{% doc %}
+  @prompt
+    Create a restock notification message that appears on product pages when a product is sold out. The message should say "Currently out of stock — new stock arriving within 3 days!" displayed as a small, elegant banner or badge near the Add to Cart button. It should only show when the product is unavailable/sold out, and should match a premium Moroccan pottery store aesthetic (earthy, warm tones or green accent). No email capture needed — just a simple informational notice.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% if product.available == false %}
+  {% style %}
+    .ai-restock-notice-{{ ai_gen_id }} {
+      display: block;
+      width: 100%;
+      margin: {{ block.settings.spacing_top }}px 0 {{ block.settings.spacing_bottom }}px;
+    }
+
+    .ai-restock-notice__banner-{{ ai_gen_id }} {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: {{ block.settings.padding_vertical }}px {{ block.settings.padding_horizontal }}px;
+      background-color: {{ block.settings.background_color }};
+      color: {{ block.settings.text_color }};
+      border-radius: {{ block.settings.border_radius }}px;
+      font-size: {{ block.settings.font_size }}px;
+      line-height: 1.4;
+      border: {{ block.settings.border_thickness }}px solid {{ block.settings.border_color }};
+      box-shadow: 0 2px 8px rgba(0, 0, 0, {{ block.settings.shadow_opacity }});
+    }
+
+    .ai-restock-notice__icon-{{ ai_gen_id }} {
+      flex-shrink: 0;
+      width: {{ block.settings.icon_size }}px;
+      height: {{ block.settings.icon_size }}px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ai-restock-notice__icon-{{ ai_gen_id }} svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: {{ block.settings.icon_color }};
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .ai-restock-notice__text-{{ ai_gen_id }} {
+      flex-grow: 1;
+      margin: 0;
+    }
+
+    @media screen and (max-width: 749px) {
+      .ai-restock-notice__banner-{{ ai_gen_id }} {
+        font-size: {{ block.settings.font_size | times: 0.9 }}px;
+      }
+
+      .ai-restock-notice__icon-{{ ai_gen_id }} {
+        width: {{ block.settings.icon_size | times: 0.85 }}px;
+        height: {{ block.settings.icon_size | times: 0.85 }}px;
+      }
+    }
+  {% endstyle %}
+
+  <div class="ai-restock-notice-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+    <div class="ai-restock-notice__banner-{{ ai_gen_id }}">
+      {% if block.settings.show_icon %}
+        <div class="ai-restock-notice__icon-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+        </div>
+      {% endif %}
+      <p class="ai-restock-notice__text-{{ ai_gen_id }}">
+        {{ block.settings.message }}
+      </p>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Restock notification",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "message",
+      "label": "Message",
+      "default": "Currently out of stock — new stock arriving within 3 days!"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icon",
+      "label": "Show icon",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f0f9f6"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#347f43"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#347f43"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#347f43"
+    },
+    {
+      "type": "range",
+      "id": "border_thickness",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Border thickness",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 16,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "shadow_opacity",
+      "min": 0,
+      "max": 0.5,
+      "step": 0.1,
+      "label": "Shadow opacity",
+      "default": 0.1
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Top spacing",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "spacing_bottom",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom spacing",
+      "default": 16
+    }
+  ],
+  "presets": [
+    {
+      "name": "Restock notification"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}
