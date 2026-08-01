@@ -45,10 +45,6 @@
   if limit == 1
     assign first_lazy_load = true
   endif
-  assign first_fetch_priority = 'high'
-  if suppress_priority == 'suppress'
-    assign first_fetch_priority = blank
-  endif
 -%}
 
 <media-gallery
@@ -91,7 +87,7 @@
             media_fit: section.settings.media_fit,
             constrain_to_viewport: section.settings.constrain_to_viewport,
             lazy_load: first_lazy_load,
-            fetch_priority: first_fetch_priority
+            fetch_priority: 'high'
           %}
         </li>
       {%- endif -%}
