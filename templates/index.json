@@ -776,10 +776,6 @@
         "show_text_below": true
       }
     },
-    "1769774565b6c1eac4": {
-      "type": "_blocks",
-      "settings": {}
-    },
     "17850825797af509b0": {
       "type": "_blocks",
       "blocks": {
@@ -831,7 +827,6 @@
     "featured_blog_home",
     "newsletter_64Crbw",
     "image_banner_XCpRWB",
-    "1769774565b6c1eac4",
     "17850825797af509b0"
   ]
 }
