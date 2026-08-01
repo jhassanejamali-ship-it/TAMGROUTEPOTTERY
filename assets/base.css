@@ -2685,6 +2685,24 @@ input[type='checkbox'] {
   .grid {
     min-width: 0;
   }
+
+  .menu-drawer a,
+  .header__inline-menu a,
+  .cart-drawer a,
+  .facets__item label {
+    min-height: 4.4rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .facets__item label {
+    width: 100%;
+  }
+
+  .footer small,
+  .footer .caption {
+    font-size: 1.4rem;
+  }
 }
 
 .header__icon--cart {
