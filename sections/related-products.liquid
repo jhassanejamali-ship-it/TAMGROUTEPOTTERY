@@ -51,6 +51,32 @@
           {%- assign skip_card_product_styles = true -%}
         {% endfor %}
       </ul>
+    {% elsif product.collections.first != blank %}
+      <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
+        {{ section.settings.heading }}
+      </h2>
+      <ul
+        class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
+        role="list"
+      >
+        {% assign fallback_count = 0 %}
+        {% for fallback_product in product.collections.first.products %}
+          {% if fallback_product.id != product.id and fallback_count < section.settings.products_to_show %}
+            <li class="grid__item">
+              {% render 'card-product',
+                card_product: fallback_product,
+                media_aspect_ratio: section.settings.image_ratio,
+                image_shape: section.settings.image_shape,
+                show_secondary_image: section.settings.show_secondary_image,
+                show_vendor: section.settings.show_vendor,
+                show_rating: section.settings.show_rating,
+                skip_styles: true
+              %}
+            </li>
+            {% assign fallback_count = fallback_count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      </ul>
     {% endif %}
   </product-recommendations>
   {% if section.settings.image_shape == 'arch' %}

@@ -1914,6 +1914,10 @@
         "icon_with_text": {
           "name": "带文本的图标",
           "settings": {
+            "content": {
+              "label": "Content",
+              "info": "Add supporting icon and text pairings"
+            },
             "layout": {
               "label": "布局",
               "options__1": {

@@ -1913,6 +1913,10 @@
         "icon_with_text": {
           "name": "Symbol mit Text",
           "settings": {
+            "content": {
+              "label": "Content",
+              "info": "Add supporting icon and text pairings"
+            },
             "layout": {
               "label": "Layout",
               "options__1": {

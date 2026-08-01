@@ -78,6 +78,8 @@
   {%- if request.design_mode -%}
     <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
+  <link rel="stylesheet" href="{{ 'component-sticky-add-to-cart.css' | asset_url }}" media="print" onload="this.media='all'">
+  <script src="{{ 'sticky-add-to-cart.js' | asset_url }}" defer="defer"></script>
 
   {%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
   {%- if first_3d_model -%}
