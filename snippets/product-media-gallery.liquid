@@ -43,7 +43,7 @@
 
   assign first_fetch_priority = 'high'
   assign first_lazy_load = false
-  if prioritize_first_media == false
+  if prioritize_first_media == false or prioritize_first_media == 'false'
     assign first_fetch_priority = blank
     assign first_lazy_load = true
   endif
