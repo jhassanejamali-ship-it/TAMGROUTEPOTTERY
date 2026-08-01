@@ -426,6 +426,9 @@
   customElements.define('sticky-header', StickyHeader);
 {% endjavascript %}
 
+{%- liquid
+  assign same_as_count = 0
+-%}
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -434,16 +437,39 @@
     {% if settings.logo %}
       "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
     {% endif %}
+    {%- if section.settings.organization_description != blank -%}
+      "description": {{ section.settings.organization_description | json }},
+    {%- endif -%}
+    {%- if section.settings.organization_email != blank -%}
+      "email": {{ section.settings.organization_email | json }},
+    {%- endif -%}
+    {%- if section.settings.organization_telephone != blank -%}
+      "telephone": {{ section.settings.organization_telephone | json }},
+    {%- endif -%}
+    {%- if section.settings.organization_address_locality != blank or section.settings.organization_address_country != blank -%}
+      "address": {
+        "@type": "PostalAddress"
+        {%- if section.settings.organization_address_locality != blank -%},
+          "addressLocality": {{ section.settings.organization_address_locality | json }}
+        {%- endif -%}
+        {%- if section.settings.organization_address_country != blank -%},
+          "addressCountry": {{ section.settings.organization_address_country | json }}
+        {%- endif -%}
+      },
+    {%- endif -%}
+    {%- if section.settings.organization_area_served != blank -%}
+      "areaServed": {{ section.settings.organization_area_served | json }},
+    {%- endif -%}
     "sameAs": [
-      {{ settings.social_twitter_link | json }},
-      {{ settings.social_facebook_link | json }},
-      {{ settings.social_pinterest_link | json }},
-      {{ settings.social_instagram_link | json }},
-      {{ settings.social_tiktok_link | json }},
-      {{ settings.social_tumblr_link | json }},
-      {{ settings.social_snapchat_link | json }},
-      {{ settings.social_youtube_link | json }},
-      {{ settings.social_vimeo_link | json }}
+      {%- if settings.social_twitter_link != blank -%}{{ settings.social_twitter_link | json }}{%- assign same_as_count = same_as_count | plus: 1 -%}{%- endif -%}
+      {%- if settings.social_facebook_link != blank -%}{% if same_as_count > 0 %},{% endif %}{{ settings.social_facebook_link | json }}{%- assign same_as_count = same_as_count | plus: 1 -%}{%- endif -%}
+      {%- if settings.social_pinterest_link != blank -%}{% if same_as_count > 0 %},{% endif %}{{ settings.social_pinterest_link | json }}{%- assign same_as_count = same_as_count | plus: 1 -%}{%- endif -%}
+      {%- if settings.social_instagram_link != blank -%}{% if same_as_count > 0 %},{% endif %}{{ settings.social_instagram_link | json }}{%- assign same_as_count = same_as_count | plus: 1 -%}{%- endif -%}
+      {%- if settings.social_tiktok_link != blank -%}{% if same_as_count > 0 %},{% endif %}{{ settings.social_tiktok_link | json }}{%- assign same_as_count = same_as_count | plus: 1 -%}{%- endif -%}
+      {%- if settings.social_tumblr_link != blank -%}{% if same_as_count > 0 %},{% endif %}{{ settings.social_tumblr_link | json }}{%- assign same_as_count = same_as_count | plus: 1 -%}{%- endif -%}
+      {%- if settings.social_snapchat_link != blank -%}{% if same_as_count > 0 %},{% endif %}{{ settings.social_snapchat_link | json }}{%- assign same_as_count = same_as_count | plus: 1 -%}{%- endif -%}
+      {%- if settings.social_youtube_link != blank -%}{% if same_as_count > 0 %},{% endif %}{{ settings.social_youtube_link | json }}{%- assign same_as_count = same_as_count | plus: 1 -%}{%- endif -%}
+      {%- if settings.social_vimeo_link != blank -%}{% if same_as_count > 0 %},{% endif %}{{ settings.social_vimeo_link | json }}{%- endif -%}
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
@@ -609,6 +635,46 @@
       "default": true,
       "label": "t:sections.header.settings.enable_customer_avatar.label",
       "info": "t:sections.header.settings.enable_customer_avatar.info"
+    },
+    {
+      "type": "header",
+      "content": "Organization structured data"
+    },
+    {
+      "type": "textarea",
+      "id": "organization_description",
+      "label": "Organization description",
+      "default": ""
+    },
+    {
+      "type": "text",
+      "id": "organization_email",
+      "label": "Organization email",
+      "default": ""
+    },
+    {
+      "type": "text",
+      "id": "organization_telephone",
+      "label": "Organization telephone",
+      "default": ""
+    },
+    {
+      "type": "text",
+      "id": "organization_address_locality",
+      "label": "Address locality",
+      "default": ""
+    },
+    {
+      "type": "text",
+      "id": "organization_address_country",
+      "label": "Address country code",
+      "default": ""
+    },
+    {
+      "type": "text",
+      "id": "organization_area_served",
+      "label": "Area served",
+      "default": ""
     },
     {
       "type": "header",

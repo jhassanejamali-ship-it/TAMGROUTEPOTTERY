@@ -58,6 +58,51 @@
         "show_text_below": true
       }
     },
+    "trust_badges": {
+      "type": "trust-badges",
+      "blocks": {
+        "badge_1": {
+          "type": "badge",
+          "settings": {
+            "label": "Handmade in Morocco"
+          }
+        },
+        "badge_2": {
+          "type": "badge",
+          "settings": {
+            "label": "Fair Trade"
+          }
+        },
+        "badge_3": {
+          "type": "badge",
+          "settings": {
+            "label": "Secure Payment"
+          }
+        },
+        "badge_4": {
+          "type": "badge",
+          "settings": {
+            "label": "Worldwide Shipping"
+          }
+        },
+        "badge_5": {
+          "type": "badge",
+          "settings": {
+            "label": "Custom Orders"
+          }
+        }
+      },
+      "block_order": [
+        "badge_1",
+        "badge_2",
+        "badge_3",
+        "badge_4",
+        "badge_5"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1"
+      }
+    },
     "multicolumn_nUxcth": {
       "type": "multicolumn",
       "blocks": {
@@ -246,57 +291,10 @@
             "button_radius": 8
           },
           "blocks": {}
-        },
-        "ai_gen_block_34d57cd_F9VwFR": {
-          "type": "ai_gen_block_34d57cd",
-          "settings": {
-            "heading": "What our customers say",
-            "subheading": "Don't just take our word for it - hear from our satisfied customers",
-            "testimonial_1_text": "Absolutely love my Tamegroute pottery! The craftsmanship is incredible and it adds such a beautiful, authentic touch to my home. The green glaze is stunning.",
-            "testimonial_1_author_name": "Sarah Johnson",
-            "testimonial_1_author_title": "Interior Designer",
-            "testimonial_1_author_image": "shopify://shop_images/home-decor-natural-1-middle.jpg",
-            "testimonial_1_rating": 3,
-            "testimonial_2_text": "The quality exceeded my expectations. Each piece tells a story and you can feel the tradition and skill that went into making it. Highly recommend!",
-            "testimonial_2_author_name": "Kate Chen",
-            "testimonial_2_author_title": "Art Collector",
-            "testimonial_2_author_image": "shopify://shop_images/DESERT.webp",
-            "testimonial_2_rating": 5,
-            "testimonial_3_text": "Fast shipping, beautiful packaging, and the pottery is even more gorgeous in person. This is authentic Moroccan artistry at its finest.",
-            "testimonial_3_author_name": "Emma Rodriguez",
-            "testimonial_3_author_title": "Home Decorator",
-            "testimonial_3_author_image": "shopify://shop_images/a-model-perched-on-a-stool-smiles.jpg",
-            "testimonial_3_rating": 5,
-            "show_trust_indicators": true,
-            "trust_indicator_1": "Secure payments",
-            "trust_indicator_2": "Verified reviews",
-            "trust_indicator_3": "Loved by 700+ customers",
-            "cta_text": "Shop collection",
-            "cta_link": "",
-            "background_color": "#ffffff",
-            "heading_color": "#377743",
-            "text_color": "#377743",
-            "accent_color": "#125920",
-            "card_background": "#ffffff",
-            "star_color": "#ffd700",
-            "button_background": "#125920",
-            "button_text_color": "#ffffff",
-            "button_hover_background": "#377743",
-            "button_hover_text_color": "#ffffff",
-            "heading_size": 36,
-            "subheading_size": 18,
-            "testimonial_text_size": 16,
-            "section_padding_top": 60,
-            "section_padding_bottom": 60,
-            "card_border_radius": 12,
-            "button_border_radius": 8
-          },
-          "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_da82d48_CFMpDQ",
-        "ai_gen_block_34d57cd_F9VwFR"
+        "ai_gen_block_da82d48_CFMpDQ"
       ],
       "settings": {}
     },
@@ -677,6 +675,23 @@
         "padding_bottom": 52
       }
     },
+    "featured_blog_home": {
+      "type": "featured-blog",
+      "settings": {
+        "blog": "news",
+        "post_limit": 3,
+        "heading": "From the Journal",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "newsletter_64Crbw": {
       "type": "newsletter",
       "blocks": {
@@ -798,6 +813,7 @@
   },
   "order": [
     "image_banner_mBqgA9",
+    "trust_badges",
     "multicolumn_nUxcth",
     "collection_list_iafPcD",
     "featured_collection",
@@ -812,6 +828,7 @@
     "rich_text_EBrBjT",
     "image_with_text_cUp9Di",
     "rich_text_XiRMgR",
+    "featured_blog_home",
     "newsletter_64Crbw",
     "image_banner_XCpRWB",
     "1769774565b6c1eac4",
