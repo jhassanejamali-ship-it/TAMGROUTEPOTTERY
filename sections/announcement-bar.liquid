@@ -74,6 +74,8 @@
             id="Slider-{{ section.id }}"
             aria-live="polite"
             aria-atomic="true"
+            aria-label="{{ 'sections.announcements.announcement' | t }}"
+            tabindex="0"
             data-autoplay="{{ section.settings.auto_rotate }}"
             data-speed="{{ section.settings.change_slides_speed }}"
           >

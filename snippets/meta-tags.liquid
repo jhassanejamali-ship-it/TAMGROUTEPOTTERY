@@ -14,6 +14,10 @@
   endif
 %}
 
+{%- if request.page_type == 'search' or request.page_type == 'cart' or request.path contains '/collections/' and request.query_string != blank -%}
+  <meta name="robots" content="noindex,follow">
+{%- endif -%}
+
 <meta property="og:site_name" content="{{ cleaned_shop_name }}">
 <meta property="og:url" content="{{ og_url }}">
 <meta property="og:title" content="{{ og_title | escape }}">
