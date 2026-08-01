@@ -51,7 +51,7 @@
           {%- assign skip_card_product_styles = true -%}
         {% endfor %}
       </ul>
-    {% elsif product.collections.first != blank %}
+    {% else %}
       <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
         {{ section.settings.heading }}
       </h2>
@@ -60,7 +60,7 @@
         role="list"
       >
         {% assign fallback_count = 0 %}
-        {% for fallback_product in product.collections.first.products %}
+        {% for fallback_product in collections.all.products %}
           {% if fallback_product.id != product.id and fallback_count < section.settings.products_to_show %}
             <li class="grid__item">
               {% render 'card-product',
