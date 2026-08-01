@@ -30,5 +30,5 @@
     sticky.classList.toggle('is-visible', !entry.isIntersecting);
   }, { threshold: 0 }).observe(primaryButton);
 
-  document.body.addEventListener('variant-change', update);
+  new MutationObserver(update).observe(productInfo, { childList: true, subtree: true, attributes: true });
 })();
