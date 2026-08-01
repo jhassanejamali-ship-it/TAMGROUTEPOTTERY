@@ -303,7 +303,7 @@
       </a>
     </div>
   </header>
-  {%- if section.settings.secondary_nav_enabled -%}
+  {%- if section.settings.secondary_nav_enabled != false -%}
     {%- assign secondary_blog_url = section.settings.secondary_nav_blog_url | default: '/blogs/news' -%}
     {%- assign secondary_about_url = section.settings.secondary_nav_about_url | default: '/pages/about-us' -%}
     {%- assign secondary_faq_url = section.settings.secondary_nav_faq_url | default: '/pages/faq' -%}
