@@ -41,10 +41,8 @@
     assign media_width = 0.45
   endif
 
-  assign first_fetch_priority = 'high'
   assign first_lazy_load = false
-  if prioritize_first_media == false or prioritize_first_media == 'false'
-    assign first_fetch_priority = blank
+  if limit == 1
     assign first_lazy_load = true
   endif
 -%}
@@ -89,7 +87,7 @@
             media_fit: section.settings.media_fit,
             constrain_to_viewport: section.settings.constrain_to_viewport,
             lazy_load: first_lazy_load,
-            fetch_priority: first_fetch_priority
+            fetch_priority: 'high'
           %}
         </li>
       {%- endif -%}
