@@ -2686,6 +2686,17 @@ input[type='checkbox'] {
     min-width: 0;
   }
 
+  a {
+    min-height: 4.4rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .rte a {
+    min-height: 0;
+    display: inline;
+  }
+
   .menu-drawer a,
   .header__inline-menu a,
   .cart-drawer a,
