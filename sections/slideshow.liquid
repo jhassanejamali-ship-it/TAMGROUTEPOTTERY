@@ -123,6 +123,7 @@
         <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
           {%- if block.settings.image -%}
             {%- liquid
+              assign slide_alt = block.settings.heading | strip_html | strip
               assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
               if section.settings.image_behavior == 'ambient'
                 assign sizes = '120vw'
@@ -140,13 +141,13 @@
               {{
                 block.settings.image
                 | image_url: width: 1600
-                | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                | image_tag: alt: slide_alt, height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
               }}
             {%- else -%}
               {{
                 block.settings.image
                 | image_url: width: 1600
-                | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+                | image_tag: alt: slide_alt, loading: 'lazy', height: height, sizes: sizes, widths: widths
               }}
             {%- endif -%}
           {%- else -%}

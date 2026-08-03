@@ -64,31 +64,36 @@
         "badge_1": {
           "type": "badge",
           "settings": {
-            "label": "Handmade in Morocco"
+            "label": "Handmade in Morocco",
+            "icon": "handmade"
           }
         },
         "badge_2": {
           "type": "badge",
           "settings": {
-            "label": "Fair Trade"
+            "label": "Fair Trade",
+            "icon": "returns"
           }
         },
         "badge_3": {
           "type": "badge",
           "settings": {
-            "label": "Secure Payment"
+            "label": "Secure Payment",
+            "icon": "secure"
           }
         },
         "badge_4": {
           "type": "badge",
           "settings": {
-            "label": "Worldwide Shipping"
+            "label": "Worldwide Shipping",
+            "icon": "globe"
           }
         },
         "badge_5": {
           "type": "badge",
           "settings": {
-            "label": "Custom Orders"
+            "label": "Custom Orders",
+            "icon": "package"
           }
         }
       },

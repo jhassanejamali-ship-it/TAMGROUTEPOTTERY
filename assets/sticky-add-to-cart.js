@@ -22,7 +22,23 @@
     stickyButton.disabled = primaryButton.disabled;
     stickyButton.querySelector('span').textContent = primaryButton.querySelector('span')?.textContent.trim() || '';
     const currentPrice = productInfo.querySelector('.price--large');
-    if (currentPrice) price.innerHTML = currentPrice.innerHTML;
+    if (!currentPrice) return;
+
+    price.replaceChildren();
+    const salePrice = currentPrice.querySelector('.price__sale');
+    const isOnSale = currentPrice.classList.contains('price--on-sale') && salePrice;
+    if (isOnSale) {
+      const compareAt = salePrice.querySelector('.price-item--regular');
+      const effectivePrice = salePrice.querySelector('.price-item--sale');
+      if (compareAt && effectivePrice) {
+        const compareAtElement = document.createElement('s');
+        compareAtElement.textContent = compareAt.textContent.trim();
+        price.append(compareAtElement, ' ', effectivePrice.textContent.trim());
+      }
+    } else {
+      const effectivePrice = currentPrice.querySelector('.price__regular .price-item--regular');
+      if (effectivePrice) price.textContent = effectivePrice.textContent.trim();
+    }
   };
   update();
 
