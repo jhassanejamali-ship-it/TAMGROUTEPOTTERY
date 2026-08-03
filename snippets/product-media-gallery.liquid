@@ -40,6 +40,11 @@
   elsif section.settings.media_size == 'small'
     assign media_width = 0.45
   endif
+
+  assign first_lazy_load = false
+  if limit == 1
+    assign first_lazy_load = true
+  endif
 -%}
 
 <media-gallery
@@ -81,7 +86,8 @@
             media_width: media_width,
             media_fit: section.settings.media_fit,
             constrain_to_viewport: section.settings.constrain_to_viewport,
-            lazy_load: false
+            lazy_load: first_lazy_load,
+            fetch_priority: 'high'
           %}
         </li>
       {%- endif -%}

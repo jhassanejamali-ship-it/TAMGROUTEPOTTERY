@@ -414,6 +414,21 @@ a.product__text {
     width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing));
   }
 
+  .product__media-wrapper .product-media-container.media-fit-cover {
+    --aspect-ratio: 1;
+  }
+
+  .product__media-wrapper .product-media-container.media-fit-cover .media {
+    height: auto;
+    padding-top: 100%;
+  }
+
+  .product__media-wrapper .product-media-container.media-fit-cover .media img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
   .product--mobile-columns .product__media-item {
     width: calc(50% - 1.5rem - var(--grid-mobile-horizontal-spacing));
   }

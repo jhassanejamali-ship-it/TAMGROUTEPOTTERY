@@ -1,0 +1,99 @@
+{%- style -%}
+  .breadcrumbs {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .breadcrumbs__list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .breadcrumbs__item:not(:last-child)::after {
+    color: rgba(var(--color-foreground), 0.55);
+    content: '/';
+    margin-left: 0.5rem;
+  }
+
+  .breadcrumbs__item:last-child {
+    color: rgba(var(--color-foreground), 0.7);
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign home_url = request.origin | append: routes.root_url
+  assign breadcrumb_label = page_title
+  assign breadcrumb_url = canonical_url
+  assign parent_label = blank
+  assign parent_url = blank
+
+  case request.page_type
+    when 'product'
+      assign breadcrumb_label = product.title
+      assign breadcrumb_url = request.origin | append: product.url
+      if collection
+        assign parent_label = collection.title
+        assign parent_url = request.origin | append: collection.url
+      elsif product.collections.first
+        assign parent_label = product.collections.first.title
+        assign parent_url = request.origin | append: product.collections.first.url
+      endif
+    when 'collection'
+      assign breadcrumb_label = collection.title
+      assign breadcrumb_url = request.origin | append: collection.url
+    when 'article'
+      assign breadcrumb_label = article.title
+      assign breadcrumb_url = request.origin | append: article.url
+      assign parent_label = blog.title
+      assign parent_url = request.origin | append: blog.url
+    when 'page'
+      assign breadcrumb_label = page.title
+      assign breadcrumb_url = request.origin | append: page.url
+  endcase
+-%}
+
+<nav class="breadcrumbs page-width" aria-label="{{ 'general.breadcrumbs.label' | t }}">
+  <ol class="breadcrumbs__list list-unstyled">
+    <li class="breadcrumbs__item">
+      <a href="{{ home_url }}">{{ 'general.breadcrumbs.home' | t }}</a>
+    </li>
+    {%- if parent_label != blank -%}
+      <li class="breadcrumbs__item">
+        <a href="{{ parent_url }}">{{ parent_label | escape }}</a>
+      </li>
+    {%- endif -%}
+    <li class="breadcrumbs__item" aria-current="page">{{ breadcrumb_label | escape }}</li>
+  </ol>
+</nav>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": {{ 'general.breadcrumbs.home' | t | json }},
+        "item": {{ home_url | json }}
+      }
+      {%- if parent_label != blank -%},
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": {{ parent_label | json }},
+        "item": {{ parent_url | json }}
+      }
+      {%- endif -%},
+      {
+        "@type": "ListItem",
+        "position": {% if parent_label != blank %}3{% else %}2{% endif %},
+        "name": {{ breadcrumb_label | json }},
+        "item": {{ breadcrumb_url | json }}
+      }
+    ]
+  }
+</script>

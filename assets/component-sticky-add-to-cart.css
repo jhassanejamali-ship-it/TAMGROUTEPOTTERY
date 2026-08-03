@@ -1,0 +1,32 @@
+.sticky-add-to-cart {
+  background: rgb(var(--color-background));
+  border-top: 0.1rem solid rgba(var(--color-foreground), 0.2);
+  bottom: 0;
+  display: none;
+  gap: 1.2rem;
+  left: 0;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  right: 0;
+  z-index: 20;
+}
+
+.sticky-add-to-cart.is-visible {
+  align-items: center;
+  display: flex;
+}
+
+.sticky-add-to-cart__price {
+  flex: 1;
+  font-weight: 600;
+}
+
+.sticky-add-to-cart__button {
+  min-height: 4.4rem;
+}
+
+@media screen and (min-width: 750px) {
+  .sticky-add-to-cart {
+    display: none !important;
+  }
+}

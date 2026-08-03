@@ -26,9 +26,7 @@
 {% endcomment %}
 
 {%- liquid
-  unless lazy_load == false
-    assign lazy = 'lazy'
-  endunless
+  assign media_alt = media.alt | default: product.title
 
   assign desktop_columns = 1
   if desktop_layout == 'columns' and media_count > 1
@@ -78,15 +76,30 @@
     </span>
     {%- render 'loading-spinner' -%}
     <div class="product__media media media--transparent">
-      {{
-        media.preview_image
-        | image_url: width: 1946
-        | image_tag:
-          class: image_class,
-          loading: lazy,
-          sizes: sizes,
-          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
-      }}
+      {%- if lazy_load == false and section.settings.product == blank -%}
+        <img
+          class="{{ image_class }}"
+          src="{{ media.preview_image | image_url: width: 1600 }}"
+          srcset="{{ media.preview_image | image_url: width: 1600 }} 1600w"
+          loading="eager"
+          fetchpriority="high"
+          alt="{{ media_alt | escape }}"
+          sizes="{{ sizes }}"
+          width="1600"
+          height="{{ 1600 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+        >
+      {%- else -%}
+        {{
+          media.preview_image
+          | image_url: width: 1600
+          | image_tag:
+            class: image_class,
+            loading: 'lazy',
+            alt: media_alt,
+            sizes: sizes,
+            widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1600'
+        }}
+      {%- endif -%}
     </div>
     <button
       class="product__media-toggle quick-add-hidden product__media-zoom-{{ section.settings.image_zoom }}"
@@ -120,14 +133,28 @@
           </span>
         {%- endif -%}
       </span>
-      {{
-        media.preview_image
-        | image_url: width: 1946
-        | image_tag:
-          loading: lazy,
-          sizes: sizes,
-          widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946'
-      }}
+      {%- if lazy_load == false and section.settings.product == blank -%}
+        <img
+          src="{{ media.preview_image | image_url: width: 1600 }}"
+          srcset="{{ media.preview_image | image_url: width: 1600 }} 1600w"
+          loading="eager"
+          fetchpriority="high"
+          alt="{{ media_alt | escape }}"
+          sizes="{{ sizes }}"
+          width="1600"
+          height="{{ 1600 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+        >
+      {%- else -%}
+        {{
+          media.preview_image
+          | image_url: width: 1600
+          | image_tag:
+            loading: 'lazy',
+            alt: media_alt,
+            sizes: sizes,
+            widths: '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1600'
+        }}
+      {%- endif -%}
     </button>
     <template>
       {%- liquid

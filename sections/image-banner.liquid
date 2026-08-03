@@ -31,13 +31,13 @@
 
 {%- liquid
   assign full_width = '100vw'
-  assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+  assign widths = '375, 550, 750, 1100, 1500, 1600'
 
   if section.settings.image_behavior == 'ambient'
     assign half_width = '60vw'
     assign full_width = '120vw'
     assign stacked_sizes = '(min-width: 750px) 60vw, 120vw'
-    assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
+    assign widths = '450, 660, 900, 1320, 1500, 1600'
   elsif section.settings.image_behavior == 'fixed' or section.settings.image_behavior == 'zoom-in'
     assign half_width = '100vw'
     assign stacked_sizes = '100vw'
@@ -49,6 +49,13 @@
   if section.index == 1
     assign fetch_priority = 'high'
   endif
+  assign banner_alt = ''
+  for block in section.blocks
+    if block.type == 'heading' and block.settings.heading != blank
+      assign banner_alt = block.settings.heading | strip_html | strip
+      break
+    endif
+  endfor
 -%}
 
 <div
@@ -72,13 +79,14 @@
       -%}
       {{
         section.settings.image
-        | image_url: width: 3840
+        | image_url: width: 1600
         | image_tag:
           width: section.settings.image.width,
           height: image_height,
           class: image_class,
           sizes: sizes,
           widths: widths,
+          alt: banner_alt,
           fetchpriority: fetch_priority
       }}
     </div>
@@ -104,14 +112,15 @@
       -%}
       {{
         section.settings.image_2
-        | image_url: width: 3840
+        | image_url: width: 1600
         | image_tag:
           width: section.settings.image_2.width,
           height: image_height_2,
           class: image_class_2,
           sizes: sizes,
           widths: widths,
-          fetchpriority: fetch_priority
+          alt: banner_alt,
+          fetchpriority: 'auto'
       }}
     </div>
   {%- endif -%}

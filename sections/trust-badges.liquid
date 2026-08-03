@@ -1,0 +1,148 @@
+{%- style -%}
+  .trust-badges-{{ section.id }} {
+    padding: 2rem 0;
+  }
+
+  .trust-badges-{{ section.id }}__list {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 0;
+    overflow-x: auto;
+    padding: 0 1.5rem;
+    scrollbar-width: thin;
+  }
+
+  .trust-badges-{{ section.id }}__item {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .trust-badges-{{ section.id }}__icon {
+    display: inline-flex;
+    height: 2.2rem;
+    width: 2.2rem;
+  }
+
+  .trust-badges-{{ section.id }}__icon svg {
+    height: 100%;
+    width: 100%;
+  }
+{%- endstyle -%}
+
+<section class="trust-badges-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <ul class="trust-badges-{{ section.id }}__list list-unstyled" role="list">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.label != blank -%}
+          <li class="trust-badges-{{ section.id }}__item" {{ block.shopify_attributes }}>
+            <span class="trust-badges-{{ section.id }}__icon" aria-hidden="true">
+              {% case block.settings.icon %}
+                {% when 'handmade' %}
+                  <svg viewBox="0 0 24 24" focusable="false"><path d="M6 20c1-4 2-7 5-9l2-1 2 2-1 2c-1 2-3 3-5 3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/><path d="m13 10 2-5 2 2-1 4M8 16l-3 2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+                {% when 'package' %}
+                  <svg viewBox="0 0 24 24" focusable="false"><path d="m4 7 8-4 8 4v10l-8 4-8-4zM4 7l8 4 8-4M12 11v10" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"/></svg>
+                {% when 'globe' %}
+                  <svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                {% when 'returns' %}
+                  <svg viewBox="0 0 24 24" focusable="false"><path d="M9 7H4l3-3M4 7a8 8 0 1 1-1 8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/><path d="M12 9v4l3 2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+                {% else %}
+                  <svg viewBox="0 0 24 24" focusable="false"><rect x="5" y="10" width="14" height="10" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+              {% endcase %}
+            </span>
+            <span>{{ block.settings.label }}</span>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Trust badges",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Badge",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Handmade in Morocco"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "handmade", "label": "Handmade" },
+            { "value": "package", "label": "Package" },
+            { "value": "globe", "label": "Globe" },
+            { "value": "returns", "label": "Returns" },
+            { "value": "secure", "label": "Secure" }
+          ],
+          "default": "handmade"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust badges",
+      "blocks": [
+        {
+          "type": "badge",
+          "settings": {
+            "label": "Handmade in Morocco",
+            "icon": "handmade"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "label": "Fair Trade",
+            "icon": "returns"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "label": "Secure Payment",
+            "icon": "secure"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "label": "Worldwide Shipping",
+            "icon": "globe"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "label": "Custom Orders",
+            "icon": "package"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

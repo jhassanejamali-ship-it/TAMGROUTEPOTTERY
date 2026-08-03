@@ -1914,6 +1914,10 @@
         "icon_with_text": {
           "name": "Ikon med tekst",
           "settings": {
+            "content": {
+              "label": "Content",
+              "info": "Add supporting icon and text pairings"
+            },
             "layout": {
               "label": "Layout",
               "options__1": {

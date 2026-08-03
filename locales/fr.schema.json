@@ -1913,6 +1913,10 @@
         "icon_with_text": {
           "name": "Icône avec texte",
           "settings": {
+            "content": {
+              "label": "Content",
+              "info": "Add supporting icon and text pairings"
+            },
             "layout": {
               "label": "Mise en page",
               "options__1": {

@@ -14,6 +14,7 @@
 {% endcomment %}
 
 {%- liquid
+  assign collection_image_alt = card_collection.featured_image.alt | default: card_collection.title
   assign ratio = 1
   if card_collection.featured_image and media_aspect_ratio == 'portrait'
     assign ratio = 0.8
@@ -67,7 +68,7 @@
                 (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
                 calc(100vw - 3rem)
               "
-              alt="{{ card_collection.featured_image.alt | escape }}"
+              alt="{{ collection_image_alt | escape }}"
               height="{{ card_collection.featured_image.height }}"
               width="{{ card_collection.featured_image.width }}"
               loading="lazy"
