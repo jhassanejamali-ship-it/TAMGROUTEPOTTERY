@@ -22,43 +22,27 @@ collection-slideshow {
   inset: 0;
 }
 
-collection-slideshow .media {
+collection-slideshow .collection-slideshow__media {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
 }
 
-collection-slideshow .collection-slideshow__image {
+collection-slideshow .collection-slideshow__media > img.collection-slideshow__image {
   opacity: 0;
   transition:
     opacity var(--collection-slideshow-transition, 500ms) ease,
     transform var(--duration-long) ease;
 }
 
-collection-slideshow .collection-slideshow__image.is-active {
+collection-slideshow .collection-slideshow__media > img.collection-slideshow__image.is-active {
   opacity: 1;
 }
 
 @media screen and (min-width: 990px) {
-  .collection-list-slideshow .card-wrapper:hover collection-slideshow .media--hover-effect > img.collection-slideshow__image {
+  .card-wrapper:hover collection-slideshow .collection-slideshow__media > img.collection-slideshow__image {
     transform: scale(1.03);
-  }
-
-  .collection-list-slideshow
-    .card-wrapper:hover
-    collection-slideshow
-    .media.media--hover-effect
-    > img.collection-slideshow__image:not(.is-active) {
-    opacity: 0;
-  }
-
-  .collection-list-slideshow
-    .card-wrapper:hover
-    collection-slideshow
-    .media.media--hover-effect
-    > img.collection-slideshow__image.is-active {
-    opacity: 1;
   }
 }
 
@@ -75,7 +59,7 @@ collection-slideshow .collection-slideshow__image.is-active {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  collection-slideshow .collection-slideshow__image {
+  collection-slideshow .collection-slideshow__media > img.collection-slideshow__image {
     transition: none;
   }
 }

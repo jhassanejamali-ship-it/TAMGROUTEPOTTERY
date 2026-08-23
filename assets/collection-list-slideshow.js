@@ -83,7 +83,8 @@ class CollectionSlideshow extends HTMLElement {
   }
 
   getSetting(name, fallback) {
-    const value = Number.parseInt(this.dataset[name], 10);
+    const datasetKey = name.replace(/-([a-z])/g, (_, character) => character.toUpperCase());
+    const value = Number.parseInt(this.dataset[datasetKey], 10);
     return Number.isFinite(value) && value > 0 ? value : fallback;
   }
 
