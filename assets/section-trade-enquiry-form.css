@@ -16,22 +16,6 @@
   grid-column: 1 / -1;
 }
 
-.trade-enquiry__field > .select {
-  position: relative;
-}
-
-.trade-enquiry__field > .select .select__select {
-  padding: 0 4rem 0 1.5rem;
-}
-
-.trade-enquiry__field > .select .svg-wrapper {
-  pointer-events: none;
-  position: absolute;
-  right: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 @media screen and (max-width: 749px) {
   .trade-enquiry__subheading {
     margin-bottom: 2.5rem;

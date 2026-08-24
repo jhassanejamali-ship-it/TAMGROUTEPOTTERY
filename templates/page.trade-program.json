@@ -49,6 +49,13 @@
         "show_text_below": true
       }
     },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
     "who_we_work_with": {
       "type": "multicolumn",
       "blocks": {
@@ -325,6 +332,7 @@
   },
   "order": [
     "trade_hero",
+    "main",
     "who_we_work_with",
     "what_we_offer",
     "how_it_works",
