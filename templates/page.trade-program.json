@@ -1,0 +1,342 @@
+{
+  "sections": {
+    "trade_hero": {
+      "type": "image-banner",
+      "blocks": {
+        "trade_hero_heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Wholesale & Trade Program",
+            "heading_size": "h0"
+          }
+        },
+        "trade_hero_text": {
+          "type": "text",
+          "settings": {
+            "text": "Authentic handmade Tamegroute pottery, direct from our workshop in southern Morocco — supplied to hotels, riads, restaurants, interior designers, retailers and homeware brands worldwide.",
+            "text_style": "body"
+          }
+        },
+        "trade_hero_buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Start a Trade Enquiry",
+            "button_link_1": "#TradeEnquiryForm",
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop the Collection",
+            "button_link_2": "shopify://collections/all",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "trade_hero_heading",
+        "trade_hero_text",
+        "trade_hero_buttons"
+      ],
+      "settings": {
+        "image": "",
+        "image_2": "",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "scheme-1",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "who_we_work_with": {
+      "type": "multicolumn",
+      "blocks": {
+        "hospitality": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Hospitality",
+            "text": "<p>Hotels, riads, restaurants and cafés furnishing rooms, tables and terraces with pottery that is made by hand rather than mass-produced.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "design_and_retail": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Design & Retail",
+            "text": "<p>Interior designers, boutiques and concept stores sourcing authentic Moroccan ceramics for projects and for their shelves.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "brands_and_retailers": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Brands & Retailers",
+            "text": "<p>Homeware brands, online retailers and distributors looking for a direct workshop relationship and repeatable reorders.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "hospitality",
+        "design_and_retail",
+        "brands_and_retailers"
+      ],
+      "settings": {
+        "title": "Who We Work With",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "what_we_offer": {
+      "type": "multicolumn",
+      "blocks": {
+        "wholesale_pricing": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Wholesale pricing",
+            "text": "<p>Competitive pricing on larger quantities, quoted per order based on the pieces you need.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "custom_production": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Custom production",
+            "text": "<p>Shapes, sizes, glazes and quantities developed together with our artisans in Tamegroute.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "direct_from_workshop": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Direct from the workshop",
+            "text": "<p>Sourced directly from the workshop in southern Morocco, not through intermediaries or mass production.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "worldwide_shipping": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "Worldwide shipping",
+            "text": "<p>Express courier, sea freight, or our European carriers that specialise in packing ceramics.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "wholesale_pricing",
+        "custom_production",
+        "direct_from_workshop",
+        "worldwide_shipping"
+      ],
+      "settings": {
+        "title": "What We Offer",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "how_it_works": {
+      "type": "multicolumn",
+      "blocks": {
+        "send_your_enquiry": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "1. Send your enquiry",
+            "text": "<p>Tell us the pieces, quantities and destination country, and share your project or shop details.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "receive_your_quote": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "2. Receive your quote",
+            "text": "<p>We reply with wholesale pricing, available pieces and a production schedule for your order.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "confirm_and_produce": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "3. Confirm and produce",
+            "text": "<p>Once you approve the quote, your order goes into production with our artisans in Tamegroute.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "packing_and_delivery": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "4. Packing and delivery",
+            "text": "<p>Pieces are individually wrapped and double-boxed. Shipping is quoted separately after your order is confirmed, so you see the cost before anything is charged.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "send_your_enquiry",
+        "receive_your_quote",
+        "confirm_and_produce",
+        "packing_and_delivery"
+      ],
+      "settings": {
+        "title": "How It Works",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "trade_faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "minimum_quantities": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are your minimum quantities?",
+            "icon": "none",
+            "row_content": "<p>Minimums depend on the pieces and on whether the order is custom. Tell us what you need and we will confirm the minimum for that specific order.</p>",
+            "page": ""
+          }
+        },
+        "lead_times": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are your lead times?",
+            "icon": "none",
+            "row_content": "<p>Lead times depend on the size of the order and whether pieces are custom-made. Every quote includes a production schedule, confirmed in writing before you commit.</p>",
+            "page": ""
+          }
+        },
+        "shipping": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How is shipping handled on wholesale orders?",
+            "icon": "none",
+            "row_content": "<p>Shipping is not included in product prices. For large or wholesale orders you receive a separate shipping quote after your order is confirmed and before any charge is made. Express orders ship via FedEx and DHL in 3–5 days. Sea shipping is priced by weight, takes 25–30 days and includes tracking. For the UK, France, Spain and Germany we work with two carriers that specialise in packing ceramics, with payment terms of 50% before shipping and 50% on delivery, tracking, and WhatsApp support during delivery.</p>",
+            "page": ""
+          }
+        },
+        "custom_designs": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can you produce custom designs?",
+            "icon": "none",
+            "row_content": "<p>Yes. We work with artisans in Tamegroute on custom shapes, sizes and quantities. Send drawings, references or dimensions with your enquiry and we will tell you what is possible.</p>",
+            "page": ""
+          }
+        },
+        "samples": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I see pieces before ordering?",
+            "icon": "none",
+            "row_content": "<p>We can send additional photos and video of current stock. Ask about a sample order in your enquiry.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "minimum_quantities",
+        "lead_times",
+        "shipping",
+        "custom_designs",
+        "samples"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Trade FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "section",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image": "",
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "trade_enquiry": {
+      "type": "trade-enquiry-form",
+      "settings": {
+        "heading": "Start a Trade Enquiry",
+        "heading_size": "h1",
+        "subheading": "<p>Tell us the pieces, quantities and destination country. We reply with wholesale pricing, availability and a production schedule.</p>",
+        "color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "trade_hero",
+    "main",
+    "who_we_work_with",
+    "what_we_offer",
+    "how_it_works",
+    "trade_faq",
+    "trade_enquiry"
+  ]
+}

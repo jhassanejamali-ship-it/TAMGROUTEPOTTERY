@@ -1,0 +1,28 @@
+.trade-enquiry__subheading {
+  margin: -1rem 0 3rem;
+}
+
+.trade-enquiry__fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 2rem;
+  align-items: start;
+}
+
+.trade-enquiry__field {
+  margin-bottom: 2rem;
+}
+
+.trade-enquiry__field--full {
+  grid-column: 1 / -1;
+}
+
+@media screen and (max-width: 749px) {
+  .trade-enquiry__subheading {
+    margin-bottom: 2.5rem;
+  }
+
+  .trade-enquiry__fields {
+    display: block;
+  }
+}
