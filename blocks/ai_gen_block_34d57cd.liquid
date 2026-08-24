@@ -267,7 +267,7 @@
             <div class="ai-testimonial-author-{{ ai_gen_id }}">
               <div class="ai-testimonial-avatar-{{ ai_gen_id }}">
                 {% if author_image %}
-                  <img src="{{ author_image | image_url: width: 112 }}" alt="{{ author_name | escape }}" loading="lazy">
+                  <img src="{{ author_image | image_url: width: 112 }}" alt="{{ author_name | escape }}" width="112" height="112" loading="lazy">
                 {% else %}
                   <div class="ai-testimonial-avatar-placeholder-{{ ai_gen_id }}">
                     {{ author_name | slice: 0 }}

@@ -1,10 +1,11 @@
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
-  <script defer src="https://shown.io/metrics/mn8jRjMw8w" type="text/javascript"></script><meta name="google-site-verification" content="g2UPB8mCiamAW1pkSqmX32npvNv-k958IES-0A-lH2A" /><head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
+    <meta name="google-site-verification" content="g2UPB8mCiamAW1pkSqmX32npvNv-k958IES-0A-lH2A" />
     <link rel="canonical" href="{{ canonical_url }}">
 
     {%- if settings.favicon != blank -%}
@@ -28,6 +29,7 @@
 
     {% render 'meta-tags' %}
 
+    <script defer src="https://shown.io/metrics/mn8jRjMw8w" type="text/javascript"></script>
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
